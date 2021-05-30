@@ -1,0 +1,26 @@
+package employeeapp;
+
+@FunctionalInterface
+
+interface Cab{ // When an interface will have excatly 1 abstract method we can say it as a functional Interface
+	
+	double bookCab(String source,String destination); //-> by default public abstract void bookCab();
+	
+	
+}
+
+
+public class lambdaApp {
+
+	public static void main(String[] args) {
+Cab cab=(source,destination)->{
+	System.out.println("UberX Booked from "+source+"to" +destination+ "  Arriving Soon ");
+return 850.12;
+};
+
+
+double fare=cab.bookCab("Bengaluru","Coorg");
+	System.out.println("Fare shall be:"+fare);	
+	}		
+	
+}
