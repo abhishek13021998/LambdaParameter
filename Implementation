@@ -1,0 +1,22 @@
+package employeeapp;
+interface Calculator{
+	void add(int num1,int num2);
+}
+
+class Calc{
+	
+public void letsAdd(int num1,int num2) {
+	System.out.println(num1 +"and"+num2+"adds to:"+(num1+num2));
+}
+	
+}
+
+public class MethodReferencesApp {
+	public static void main(String[] args) {
+		
+		Calc calc=new Calc();
+		Calculator cRef=calc::letsAdd;
+		cRef.add(12,23);
+	}
+
+}
