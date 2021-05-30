@@ -1,0 +1,28 @@
+package employeeapp;
+
+@FunctionalInterface
+
+interface Cab{ // When an interface will have excatly 1 abstract method we can say it as a functional Interface
+	
+	void bookCab(); //-> by default public abstract void bookCab();
+	
+	
+}
+
+
+public class lambdaApp {
+
+	public static void main(String[] args) {
+//Anonmyous class implementation
+		Cab cab=new Cab() { //Short cut key ctrl+spacebar to create anonmyou class
+			
+			@Override
+			public void bookCab() {
+				// TODO Auto-generated method stub
+				System.out.println("UberX Booked !! Arriving Soon !!");
+			}
+		};
+		cab.bookCab();
+		
+	}
+}
