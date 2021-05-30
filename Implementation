@@ -1,0 +1,29 @@
+package employeeapp;
+interface Calculator{
+	void add(int num1,int num2);
+}
+
+class Calc{
+	
+public void letsAdd(int num1,int num2) {
+	System.out.println(num1 +"and"+num2+"adds to:"+(num1+num2));
+}
+	
+}
+
+interface Messenger{
+	Message getMessage(String msg);
+}
+
+class Message{
+	Message(String msg){
+		System.out.println(">>Message is:"+msg);
+	}
+}
+public class MethodReferencesApp {
+	public static void main(String[] args) {
+	Messenger mRef=Message::new;
+	mRef.getMessage("Serach the candle rather than Cursing the darkness!!");
+	}
+
+}
